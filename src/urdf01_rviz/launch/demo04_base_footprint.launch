@@ -1,0 +1,11 @@
+<launch>
+    <!-- 1.在参数服务器载入 urdf 文件 -->   
+    <param name="robot_description" textfile="$(find urdf01_rviz)/urdf/urdf/demo04_base_footprint.urdf" />
+    <!-- 2.启动 rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find urdf01_rviz)/config/show_mycar.rviz" />   
+    <!-- rviz 中显示URDF 时，必须发布不同部件之间的 坐标系 关系 -->
+    <!-- 3.启动 robot_state_publisher -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <!-- 4.启动 joint_state_publisher -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+</launch>

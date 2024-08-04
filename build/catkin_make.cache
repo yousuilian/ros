@@ -1,0 +1,2 @@
+urdf01_rviz
+-DCATKIN_DEVEL_PREFIX=/home/optobot/DEMO05_WS/devel -DCMAKE_INSTALL_PREFIX=/home/optobot/DEMO05_WS/install -G Unix Makefiles
